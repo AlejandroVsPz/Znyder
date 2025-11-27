@@ -1,0 +1,96 @@
+<style>
+  :root {
+      /* Define una variable de color */
+      /*--color-principal:  #3a86ff; */
+      --color-principal:   #303030;
+    }
+
+  footer {
+    background-color: var(--color-negro);
+    /* Color de fondo oscuro */
+    color: #fff;
+    /* Color del texto blanco */
+    padding: 20px;
+    /* Añade espacio interior para mejor legibilidad */
+  }
+
+  footer h5 {
+    color: #fff;
+    /* Color del título blanco */
+    font-weight: bold;
+    /* Negrita para el título */
+    margin-bottom: 15px;
+    /* Espacio inferior del título */
+  }
+
+  footer a {
+    color: #fff;
+    /* Color del enlace */
+    text-decoration: none;
+    /* Quita subrayado */
+    transition: color 0.3s ease;
+    /* Transición suave del color */
+  }
+
+  footer a:hover {
+    color: #cfcfcf;
+    /* Cambia color del enlace al pasar el mouse */
+  }
+
+  .social-icons a {
+    font-size: 2rem;
+    /* Tamaño de los íconos */
+    margin: 0 10px;
+    /* Espacio entre íconos */
+    color: #fff;
+    /* Color inicial de los íconos */
+    transition: color 0.3s ease;
+    /* Transición suave del color */
+  }
+
+  .social-icons a:hover {
+    color: #cfcfcf;
+    /* Cambia color al pasar el mouse */
+  }
+</style>
+
+<div class="container">
+  <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+    <div class="col mb-3">
+      <a href="home.html" class="d-flex align-items-center mb-3 link-body-emphasis ">
+        <img class="rounded-lg-3" src="Images/znyder.png" alt="VAR" width="100%" height="100%">
+      </a>
+      <p>&copy; Znyder derechos reservados.</p>
+    </div>
+
+    <div class="col mb-3">
+
+    </div>
+
+    <div class="col mb-3 text-center social-icons">
+      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i
+          class="fa-brands fa-square-facebook"></i></a>
+      <a href="https://x.com/SofitekOfficial" target="_blank" rel="noopener noreferrer"><i
+          class="fa-brands fa-square-x-twitter"></i></i></a>
+      <a href="https://www.instagram.com/sofitekofficial/" target="_blank" rel="noopener noreferrer"><i
+          class="fa-brands fa-square-instagram"></i></a>
+      <a href="https://www.youtube.com/@SofitekOfficial " target="_blank" rel="noopener noreferrer"><i
+          class="fa-brands fa-square-youtube"></i></a>
+    </div>
+
+    <div class="col mb-3">
+
+    </div>
+
+    <div class="col mb-3">
+      <h5>Connect</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#">Careers</a></li>
+        <li class="nav-item mb-2"><a href="#">Terms of Use</a></li>
+        <li class="nav-item mb-2"><a href="#">Privacy</a></li>
+        <li class="nav-item mb-2"><a href="#">Community</a></li>
+        <li class="nav-item mb-2"><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </footer>
+</div>

@@ -1,0 +1,157 @@
+<!-- navbar.html -->
+<nav id="navbar" class="navbar fixed-top navbar-expand-lg  custom-navbar transparent-nav">
+
+  <style>
+    .nav-link {
+      color: #ffffff;
+    }
+
+    .custom-navbar {
+      background-color: transparent;
+      /* Fondo transparente al inicio */
+      transition: background-color 0.3s ease;
+      /* Transición suave */
+      /* Color  personalizado */
+      background-color: var(--color-blanco);
+    }
+
+
+    .navbar-nav .nav-link:hover {
+      color: #ffffff !important;
+      /* Color del texto al pasar el cursor */
+    }
+
+    /**/
+    .navbar.scrolled {
+      background-color: #ffffff !important;
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar.scrolled .nav-link,
+    .navbar.scrolled .navbar-brand,
+    .navbar.scrolled .dropdown-menu .dropdown-item {
+      color: #000000 !important;
+    }
+
+    .navbar.scrolled .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+    .navbar.scrolled .navbar-toggler {
+      border-color: rgba(0, 0, 0, 1);
+    }
+
+    /**/
+
+    @media (min-width: 992px) {
+
+      /* 992px es el tamaño de pantalla lg */
+      .navbar {
+        padding-left: 10rem;
+        /* Personaliza el padding a la izquierda */
+        padding-right: 10rem;
+        /* Personaliza el padding a la derecha */
+      }
+    }
+
+    .dropdown-toggle::after {
+      display: none !important;
+      /* Ocultar la flechita del dropdown */
+    }
+
+    /* Estilos personalizados para el dropdown */
+    .dropdown-menu {
+      background-color: var(--color-negro);
+      /* Color de fondo del dropdown */
+      font-family: 'Arial', sans-serif;
+      /* Fuente del dropdown */
+    }
+
+    .dropdown-menu .dropdown-item {
+      color: #ecf0f1;
+      /* Color del texto de los elementos del dropdown */
+    }
+
+    .dropdown-menu .dropdown-item:hover {
+      background-color: #ffffff;
+      /* Color de fondo al pasar el cursor */
+      color: var(--mainColor);
+      /* Color del texto al pasar el cursor */
+    }
+
+    /* CSS para mostrar el dropdown en hover */
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0;
+      /* Remove margin introduced by Bootstrap */
+    }
+
+    /* Cambia el color del ícono del Navbar Toggler a blanco */
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+    /* Cambia el color del borde del botón toggler a blanco */
+    .navbar-toggler {
+      border-color: rgba(255, 255, 255, 1);
+      /* Borde blanco */
+    }
+  </style>
+
+  <div class="container-fluid">
+    <a class="navbar-brand" href="home.html">
+      <img src="Images/znyder.png" id="logo" alt="Znyder" style="height: 60px;" class="d-inline-block align-text-top">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav  ms-auto mb-2 mb-lg-0 ">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">Industries</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Energy</a></li>
+            <li><a class="dropdown-item" href="#">Retail</a></li>
+            <li><a class="dropdown-item" href="#">Security</a></li>
+            <li><a class="dropdown-item" href="#">Networks</a></li>
+            <li><a class="dropdown-item" href="#">Education</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="Solutions&Services.html" role="button"
+            aria-expanded="false">Solutions & Services</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Software Development</a></li>
+            <li><a class="dropdown-item" href="#">Cloud Infrastructure</a></li>
+            <li><a class="dropdown-item" href="#">Management & Maintenance</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">What we do</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Software Development</a></li>
+            <li><a class="dropdown-item" href="#">Cloud Infrastructure</a></li>
+            <li><a class="dropdown-item" href="#">Management & Maintenance</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">Who we are</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Sustainability</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script>
+  window.addEventListener('scroll', function () {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+</script>
